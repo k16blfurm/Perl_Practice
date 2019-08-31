@@ -3,22 +3,14 @@ use strict;
 use warnings;
 #use game;
 #trying to point to a file
-#use File::Basename();
-#fileparse("./game.pm");
 use FindBin;
-use lib $FindBin::Bin;
-#use lib abs_path("$FindBin::game*");
+use lib "$FindBin::Bin";
 
 #$choice = 'a';
 my $quit = 'y';
 
-#print "hello";
-# chomp is for removing new line
-# this is for including multiple files
-require "./hangman.pl";
-require "./game.pm";
 
-use Game::game;
+use bin::Game;
 
 # Iterate over the content of foo/bar
 while (1) {
@@ -29,18 +21,19 @@ while (1) {
 
 	# this is using grep for filtering
 	#my $decision = grep { $_ = 'q'} $choice;
-
+	#this is for filtering new lines
 	chomp $choice;
 
 	if($choice eq '1')
 	{
 		print STDOUT "1 was pressed\n" ;
-
+		Game::game();
 	}
+	#q is broken
 	if($choice eq 'q')
 	{
 		print STDOUT ("q was pressed\n");
-		game::game();
+		game();
 
 	}
 	if($choice eq '0')                             
