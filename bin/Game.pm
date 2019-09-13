@@ -9,7 +9,9 @@ our @EXPORT = qw( game );
 
 # this is where all the hangman takes place!
 use FindBin;
-use lib $FindBin::Hangman;
+use lib "$FindBin::hangman";
+
+#use hangman::Hangman;
 
 
 sub game{
