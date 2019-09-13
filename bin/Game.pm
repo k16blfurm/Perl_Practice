@@ -8,6 +8,9 @@ our $VERSION = '1.00';
 our @EXPORT = qw( game );
 
 # this is where all the hangman takes place!
+use FindBin;
+use lib $FindBin::Hangman;
+
 
 sub game{
 

@@ -11,7 +11,7 @@ my $quit = 'y';
 
 
 use bin::Game;
-use bin::hangman;
+use bin::Hangman;
 
 
 # Iterate over the content of foo/bar
